@@ -9,7 +9,8 @@ BeautifulSoup
 requests
 ```
 ## Example
-endpoint: `http://127.0.0.1:5000/url?url=XXX`
+Go to the [directory](./mining/) and type `python api.py` to start the server
+Endpoint: `http://127.0.0.1:5000/url?url=XXX`
 - XXX is where you input the url
 
 e.g. Get keyword from website: https://www.investopedia.com/terms/c/cryptocurrency.asp
