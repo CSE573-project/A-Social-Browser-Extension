@@ -2,7 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 
 def get_keyword(url):
-    # print(type(url))
     # Check the schema
     if "https://" not in url and "http://" not in url:
         url = "https://" + url
@@ -30,4 +29,5 @@ def get_keyword(url):
     result["description"] = description
     return result
         
-
+if __name__ == "__main__":
+    get_keyword()

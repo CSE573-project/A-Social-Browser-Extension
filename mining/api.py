@@ -2,7 +2,7 @@ import flask
 from flask import jsonify, request
 from main import get_keyword
 app = flask.Flask(__name__)
-app.config["DEBUG"] = True
+# app.config["DEBUG"] = True
 @app.route('/', methods=['GET'])
 def home():
     message = """
@@ -12,8 +12,16 @@ def home():
     return message
 @app.route('/url', methods=['GET'])
 def url():
-    # print(request.args.get('url'))
-    # print("omg")
+    """
+    Input data: url
+    Return data:
+    {
+        "description": "A cryptocurrency is a digital or virtual currency that uses cryptography and is difficult to counterfeit.",
+        "h1_tag": null,
+        "title": "What Is Cryptocurrency?",
+        "url": "https://www.investopedia.com/terms/c/cryptocurrency.asp"
+    }
+    """
     args = request.args
     url = args.get('url')
     if 'url' not in args:
@@ -21,10 +29,5 @@ def url():
     else:
         keyword = get_keyword(url)
         return jsonify(keyword)
-# input data: url
-# return data
-# data: {
-#     url: "url",
-#     keyword: "a b c"
-# }
+
 app.run()
