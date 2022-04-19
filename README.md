@@ -10,7 +10,8 @@ requests
 ```
 ## Example
 endpoint: `http://127.0.0.1:5000/url?url=XXX`
-- XXX is where you input the url\n
+- XXX is where you input the url
+
 e.g. Get keyword from website: https://www.investopedia.com/terms/c/cryptocurrency.asp
 
 ### Format
