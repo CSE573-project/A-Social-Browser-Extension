@@ -28,6 +28,6 @@ def url():
         return "Error: no url. Please input url"
     else:
         keyword = get_keyword(url)
-        return jsonify(keyword)
+        return keyword
 
 app.run()
