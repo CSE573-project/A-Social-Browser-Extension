@@ -1,8 +1,10 @@
 import flask
 from flask import jsonify, request
+import json
 from main import get_keyword
+from main import get_keyword_multiple
 app = flask.Flask(__name__)
-# app.config["DEBUG"] = True
+app.config["DEBUG"] = True
 @app.route('/', methods=['GET'])
 def home():
     message = """
@@ -24,5 +26,17 @@ def url():
     else:
         keyword = get_keyword(url)
         return keyword
-
+@app.route('/urls', methods=['POST'])
+def urls():
+    """
+    Input data: url list
+    Return data:
+        A cryptocurrency is a digital or virtual currency that uses cryptography and is difficult to counterfeit.
+    """
+    urls = request.form.get("urls")
+    if not urls:
+        return "Error: no url. Please input url"
+    # print(args)
+    keyword = get_keyword_multiple(urls)
+    return json.dumps(keyword)
 app.run()

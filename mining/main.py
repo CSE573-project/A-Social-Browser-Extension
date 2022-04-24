@@ -1,6 +1,14 @@
 import requests
 from bs4 import BeautifulSoup
 from scrape_wiki import search_wiki
+# batch_url = ['https://www.investopedia.com/terms/c/cryptocurrency.asp', 'https://en.wikipedia.org/wiki/Lionel_Messi', 'https://en.wikipedia.org/wiki/Elon_Musk', 'https://en.wikipedia.org/wiki/Barack_Obama', 'https://en.wikipedia.org/wiki/Ukraine', 'https://en.wikipedia.org/wiki/Pacific_Ocean']
+def get_keyword_multiple(urls):
+    urls = urls.split(",")
+    result = []
+    for i in urls:
+        keyword = get_keyword(i.replace("'", ""))
+        result.append(keyword)
+    return result
 def get_keyword(url):
     # Check if wiki
     if "wikipedia" in url:
@@ -37,4 +45,6 @@ def get_keyword(url):
     return result
         
 if __name__ == "__main__":
-    get_keyword()
+    get_keyword(url)
+    # get_keyword_multiple(batch_url)
+
