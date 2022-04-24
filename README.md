@@ -19,12 +19,7 @@ e.g. Get keyword from website: https://www.investopedia.com/terms/c/cryptocurren
 ### Format
 Command: `curl "127.0.0.1:5000/url?url=https://www.investopedia.com/terms/c/cryptocurrency.asp"`
 ### Return value
-JSON file:
-```json
-{
-  "description": "A cryptocurrency is a digital or virtual currency that uses cryptography and is difficult to counterfeit.",
-  "h1_tag": null,
-  "title": "What Is Cryptocurrency?",
-  "url": "https://www.investopedia.com/terms/c/cryptocurrency.asp"
-}
+text :
+```
+A cryptocurrency is a digital or virtual currency that uses cryptography and is difficult to counterfeit.
 ```
