@@ -7,6 +7,7 @@ This is the api to get keyword from a website
 flask
 BeautifulSoup
 requests
+wikipedia-api
 ```
 ## Example
 Go to the [directory](./mining/) and type `python api.py` to start the server
