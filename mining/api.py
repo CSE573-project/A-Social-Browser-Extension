@@ -15,12 +15,7 @@ def url():
     """
     Input data: url
     Return data:
-    {
-        "description": "A cryptocurrency is a digital or virtual currency that uses cryptography and is difficult to counterfeit.",
-        "h1_tag": null,
-        "title": "What Is Cryptocurrency?",
-        "url": "https://www.investopedia.com/terms/c/cryptocurrency.asp"
-    }
+        A cryptocurrency is a digital or virtual currency that uses cryptography and is difficult to counterfeit.
     """
     args = request.args
     url = args.get('url')
